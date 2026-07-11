@@ -13,7 +13,10 @@ const adminRoutes = require("./routes/adminRoutes");
 const noteRoutes = require("./routes/noteRoutes");
 
 const app = express();
-const allowedOrigins = (process.env.FRONTEND_URL || "http://localhost:5173").split(",").map((origin) => origin.trim()).filter(Boolean);
+const allowedOrigins = (
+  process.env.FRONTEND_URL || "http://localhost:5173"
+)
+.split(",")
 
 app.set("trust proxy", 1);
 app.use(helmet());
